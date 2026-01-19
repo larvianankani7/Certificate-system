@@ -1,0 +1,41 @@
+:root{
+  --dark-bg:#021a1f;
+  --card-bg:#03343f;
+  --cyan:#00e5ff;
+  --blue:#0dcaf0;
+  --text:#e6f9ff;
+}
+
+body{
+  background: var(--dark-bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card{
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,229,255,0.2);
+}
+
+.btn-cyan{
+  background: linear-gradient(45deg,var(--cyan),var(--blue));
+  color:#000;
+  border:none;
+  font-weight:600;
+}
+
+.btn-cyan:hover{
+  opacity:0.85;
+}
+.nav-link:hover{
+  color: var(--cyan) !important;
+}
+#certificate {
+  box-shadow: 0 0 30px rgba(0,229,255,0.5);
+}
+@media print {
+  body {
+    background: white;
+  }
+}
