@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
+  
   return (
     <motion.nav
       className="navbar navbar-expand-lg px-4"

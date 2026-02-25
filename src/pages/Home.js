@@ -1,11 +1,12 @@
 import React from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="container-fluid py-5">
+    <div className="theme-dark-cyan min-vh-100">
+    <div className="container-fluid py-5 text-light" >
       {/* HERO SECTION */}
-      <div className="row align-items-center px-4">
+      <div className="row align-items-center px-4 " >
         <motion.div
           className="col-md-6 fade-in"
           initial={{ x: -80, opacity: 0 }}
@@ -50,12 +51,13 @@ export default function Home() {
             >
               <div className="card p-4 h-100 fade-in">
                 <h5 className="text-info">{f.title}</h5>
-                <p className="mt-2, text-light">{f.desc}</p>
+                <p className="mt-2 text-light">{f.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

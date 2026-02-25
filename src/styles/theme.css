@@ -39,3 +39,51 @@ body{
     background: white;
   }
 }
+/* GLOBAL DARK CYAN THEME */
+.theme-dark-cyan {
+  background-color: #062f2f;
+  color: #e0f7f7;
+}
+
+/* Cards */
+.theme-dark-cyan .card {
+  background-color: #0b3f3f;
+  color: #e0f7f7;
+  border: 1px solid #1f6f6f;
+}
+
+/* Card titles */
+.theme-dark-cyan .card-title,
+.theme-dark-cyan h1,
+.theme-dark-cyan h2,
+.theme-dark-cyan h3 {
+  color: #00cccc;
+}
+
+/* Forms */
+.theme-dark-cyan .form-control,
+.theme-dark-cyan .form-select {
+  background-color: #083838;
+  color: #ffffff;
+  border: 1px solid #1f6f6f;
+}
+
+.theme-dark-cyan .form-control::placeholder {
+  color: #9fdede;
+}
+
+/* Tables */
+.theme-dark-cyan .table {
+  color: #ffffff;
+}
+
+/* Alerts */
+.theme-dark-cyan .alert-success {
+  background-color: #0f5132;
+  color: #d1e7dd;
+}
+
+.theme-dark-cyan .alert-danger {
+  background-color: #842029;
+  color: #f8d7da;
+}

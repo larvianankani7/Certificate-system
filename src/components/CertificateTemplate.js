@@ -4,64 +4,88 @@ export default function CertificateTemplate({ data }) {
   if (!data) return null;
 
   return (
-    <div
-      id="certificate"
-      className="p-5"
-      style={{
-        width: "1000px",
-        height: "700px",
-        background: "linear-gradient(135deg,#021a1f,#03343f)",
-        color: "#e6f9ff",
-        border: "8px solid #00e5ff",
-        borderRadius: "20px",
-        position: "relative",
-        fontFamily: "Georgia, serif"
-      }}
-    >
-      <h1 className="text-center text-info fw-bold">
-        Certificate of Completion
-      </h1>
-
-      <p className="text-center mt-4 fs-5">
-        This is to certify that
-      </p>
-
-      <h2 className="text-center fw-bold mt-2">
-        {data.studentName}
-      </h2>
-
-      <p className="text-center mt-3 fs-5">
-        has successfully completed the internship in
-      </p>
-
-      <h4 className="text-center text-info fw-bold">
-        {data.domain}
-      </h4>
-
-      <p className="text-center mt-3">
-        from <b>{data.startDate}</b> to <b>{data.endDate}</b>
-      </p>
-
+    <div className="d-flex justify-content-center">
       <div
+        id="certificate"
+        className="p-5 shadow-lg"
         style={{
-          position: "absolute",
-          bottom: "40px",
-          left: "60px"
+          width: "1100px",
+          height: "750px",
+          background: "linear-gradient(135deg, #021a1f, #043f4a)",
+          color: "#e6fbff",
+          border: "10px solid #00e5ff",
+          borderRadius: "18px",
+          position: "relative",
+          fontFamily: "'Georgia', serif"
         }}
       >
-        <p><b>Certificate ID:</b> {data.certificateId}</p>
-      </div>
+        {/* LOGO */}
+        <div className="text-center mb-4">
+          <img
+            src="/logo.png"
+            alt="Institute Logo"
+            style={{ height: "80px" }}
+          />
+        </div>
 
-      <div
-        style={{
-          position: "absolute",
-          bottom: "40px",
-          right: "60px",
-          textAlign: "right"
-        }}
-      >
-        <p className="mb-1">Authorized Signature</p>
-        <b>CertifyX Authority</b>
+        {/* TITLE */}
+        <h1 className="text-center text-info fw-bold mb-2">
+          CERTIFICATE OF COMPLETION
+        </h1>
+
+        <p className="text-center fst-italic">
+          This certificate is proudly presented to
+        </p>
+
+        {/* STUDENT NAME */}
+        <h2 className="text-center fw-bold mt-3 mb-3 text-light text-uppercase">
+          {data.studentName}
+        </h2>
+
+        {/* BODY */}
+        <p className="text-center fs-5 px-5">
+          for successfully completing the
+          <span className="fw-bold text-info"> {data.course} </span>
+          program conducted by
+          <span className="fw-bold"> CertifyX Training Authority</span>.
+          This accomplishment reflects dedication, commitment, and
+          professional excellence.
+        </p>
+
+        {/* DATE */}
+        <p className="text-center mt-3">
+          Issued on <b>{new Date(data.generatedAt).toDateString()}</b>
+        </p>
+
+        {/* FOOTER */}
+        <div
+          className="d-flex justify-content-between align-items-end"
+          style={{
+            position: "absolute",
+            bottom: "40px",
+            left: "60px",
+            right: "60px"
+          }}
+        >
+          {/* CERT ID */}
+          <div>
+            <p className="mb-1">
+              <b>Certificate ID</b>
+            </p>
+            <p>{data.certificateId}</p>
+          </div>
+
+          {/* SIGNATURE */}
+          <div className="text-end">
+            <img
+              src="/signature.png"
+              alt="Authorized Signature"
+              style={{ width: "160px" }}
+            />
+            <p className="mb-0">Authorized Signatory</p>
+            <b>CertifyX Authority</b>
+          </div>
+        </div>
       </div>
     </div>
   );

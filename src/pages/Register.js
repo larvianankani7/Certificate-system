@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import API from "../services/api";
+import API from "../services/api"; // Changed from ../../ to ../
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -20,7 +20,8 @@ export default function Register() {
       alert("Registration successful!");
       window.location.href = "/login";
     } catch (err) {
-      alert("Registration failed");
+      const msg = err.response?.data?.msg || "Registration failed";
+      alert(msg);
     }
   };
 
