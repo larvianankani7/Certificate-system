@@ -13,7 +13,7 @@ export default function TrackStatus() {
     const fetchStatus = async () => {
       try {
         const res = await axios.get(
-          "http://https://certificate-system-8vqc.onrender.com/api/certificates/student",
+          "https://certificate-system-8vqc.onrender.com/api/certificates/student",
           { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
         );
 
