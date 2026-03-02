@@ -7,7 +7,7 @@ export default function VerifyCertificate() {
   const [result, setResult] = useState(null);
 
   const verify = async () => {
-    const cleanedCertId = certId.trim(); // ✅ FIX: remove leading/trailing spaces
+    const cleanedCertId = certId.trim(); 
 
     if (!cleanedCertId) {
       setResult({ valid: false });
@@ -16,7 +16,7 @@ export default function VerifyCertificate() {
 
     try {
       const res = await axios.get(
-        `http://https://certificate-system-8vqc.onrender.com/api/certificates/verify/${encodeURIComponent(cleanedCertId)}`
+        `https://certificate-system-8vqc.onrender.com/api/certificates/verify/${encodeURIComponent(cleanedCertId)}`
       );
       setResult(res.data);
     } catch (err) {
