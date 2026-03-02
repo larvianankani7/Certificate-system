@@ -5,7 +5,7 @@ export default function Uploads() {
   const [uploads, setUploads] = useState([]);
 
   useEffect(() => {
-    axios.get("http://https://certificate-system-8vqc.onrender.com/api/upload")
+    axios.get("https://certificate-system-8vqc.onrender.com/api/upload")
       .then(res => setUploads(res.data));
   }, []);
 
@@ -27,7 +27,7 @@ export default function Uploads() {
               <td>{new Date(u.uploadedAt).toDateString()}</td>
               <td>
                 <a
-                  href={`http://https://certificate-system-8vqc.onrender.com/${u.filePath}`}
+                  href={`https://certificate-system-8vqc.onrender.com/${u.filePath}`}
                   className="btn btn-info btn-sm"
                 >
                   Download
