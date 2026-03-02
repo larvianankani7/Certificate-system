@@ -27,7 +27,7 @@ export default function Uploads() {
               <td>{new Date(u.uploadedAt).toDateString()}</td>
               <td>
                 <a
-                  href={`http://localhost:5000/${u.filePath}`}
+                  href={`http://https://certificate-system-8vqc.onrender.com/${u.filePath}`}
                   className="btn btn-info btn-sm"
                 >
                   Download
