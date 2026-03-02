@@ -15,7 +15,7 @@ export default function Downloads() {
     const fetchDownloads = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/certificates/student/downloads",
+          "http://https://certificate-system-8vqc.onrender.com/api/certificates/student/downloads",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -59,7 +59,7 @@ export default function Downloads() {
     try {
       // Use the same robust download logic we fixed earlier
       const res = await axios.get(
-        `http://localhost:5000/api/certificates/student/download/${item.certificateId}`, // Use the ID route
+        `http://https://certificate-system-8vqc.onrender.com/api/certificates/student/download/${item.certificateId}`, // Use the ID route
         {
           responseType: "blob",
           headers: {
