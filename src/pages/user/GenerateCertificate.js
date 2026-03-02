@@ -63,7 +63,7 @@ export default function GenerateCertificate() {
     const token = localStorage.getItem("token"); // 1. Get the token
 
     const res = await axios.get(
-      `http://https://certificate-system-8vqc.onrender.com/api/certificates/student/download/${id}`, 
+      `https://certificate-system-8vqc.onrender.com/api/certificates/student/download/${id}`, 
       { 
         responseType: "blob",
         headers: {
