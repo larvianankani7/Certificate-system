@@ -16,7 +16,7 @@ export default function VerifyCertificate() {
 
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/certificates/verify/${encodeURIComponent(cleanedCertId)}`
+        `http://https://certificate-system-8vqc.onrender.com/api/certificates/verify/${encodeURIComponent(cleanedCertId)}`
       );
       setResult(res.data);
     } catch (err) {
