@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 export default function UploadExcel() {
@@ -10,9 +9,6 @@ export default function UploadExcel() {
   const [fileName, setFileName] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
-
-  // Handle Excel Preview
   const handleFile = (e) => {
     const selectedFile = e.target.files[0];
     if (!selectedFile) return;

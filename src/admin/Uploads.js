@@ -5,7 +5,7 @@ export default function Uploads() {
   const [uploads, setUploads] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/upload")
+    axios.get("http://https://certificate-system-8vqc.onrender.com/api/upload")
       .then(res => setUploads(res.data));
   }, []);
 
