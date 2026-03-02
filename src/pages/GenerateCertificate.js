@@ -11,7 +11,7 @@ export default function GenerateCertificate() {
   // Fetch uploads
   useEffect(() => {
     axios
-      .get("http://https://certificate-system-8vqc.onrender.com/api/upload", {
+      .get("https://certificate-system-8vqc.onrender.com/api/upload", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -32,7 +32,7 @@ export default function GenerateCertificate() {
 
     try {
       const res = await axios.get(
-        `http://https://certificate-system-8vqc.onrender.com/api/upload/${id}/students`,
+        `https://certificate-system-8vqc.onrender.com/api/upload/${id}/students`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ export default function GenerateCertificate() {
 
       // Step 1: Generate certificate
       const res = await axios.post(
-        "http://https://certificate-system-8vqc.onrender.com/api/certificates/generate",
+        "https://certificate-system-8vqc.onrender.com/api/certificates/generate",
         {
           name: student.name.trim(),
           email: student.email.trim(),
@@ -77,7 +77,7 @@ export default function GenerateCertificate() {
       setTimeout(async () => {
           try {
               const pdfRes = await axios.get(
-                `http://https://certificate-system-8vqc.onrender.com/api/certificates/student/download/${certificateId}`,
+                `https://certificate-system-8vqc.onrender.com/api/certificates/student/download/${certificateId}`,
                 {
                   responseType: "blob",
                   headers: { Authorization: `Bearer ${token}` },
